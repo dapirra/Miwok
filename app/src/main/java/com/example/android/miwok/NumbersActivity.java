@@ -13,23 +13,6 @@ public class NumbersActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
-//        String[] wordsArray = {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
-//        ArrayList<String> words = new ArrayList<>(Arrays.asList(wordsArray));
-
-//        ArrayList<String> words = new ArrayList<>();
-//        words.add("one");
-//        words.add("two");
-//        words.add("three");
-//        words.add("four");
-//        words.add("five");
-//        words.add("six");
-//        words.add("seven");
-//        words.add("eight");
-//        words.add("nine");
-//        words.add("ten");
-
-//      ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, words);
-
         ArrayList<Word> words = new ArrayList<>();
         words.add(new Word("one", "lutti", R.drawable.number_one, R.raw.number_one));
         words.add(new Word("two", "otiiko", R.drawable.number_two, R.raw.number_two));
@@ -45,13 +28,5 @@ public class NumbersActivity extends AppCompatActivity {
         WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_numbers);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
-
-//        LinearLayout rootView = findViewById(R.id.root_view);
-//        TextView wordView;
-//        for (int i = 0; i < words.length; i++) {
-//            wordView = new TextView(this);
-//            wordView.setText(words[i]);
-//            rootView.addView(wordView);
-//        }
     }
 }
