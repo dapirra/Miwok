@@ -16,6 +16,7 @@
 package com.example.android.miwok;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 
@@ -27,8 +28,14 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
+        // Used to remove ActionBar Shadow | https://stackoverflow.com/a/12246593
+        getSupportActionBar().setElevation(0);
+
         ViewPager viewPager = findViewById(R.id.viewpager);
 
         viewPager.setAdapter(new MiwokFragmentPagerAdapter(getSupportFragmentManager()));
+
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }
