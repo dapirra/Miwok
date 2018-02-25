@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -49,11 +49,10 @@ public class WordAdapter extends ArrayAdapter<Word> {
             imageView.setVisibility(View.GONE);
         }
 
-        LinearLayout textContainer = listItemView.findViewById(R.id.text_container);
-
+        RelativeLayout textContainer = listItemView.findViewById(R.id.text_container_parent);
         textContainer.setBackgroundResource(colorID);
 
-        textContainer.setOnClickListener(new View.OnClickListener() {
+        listItemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 MediaPlayer mediaPlayer = MediaPlayer.create(mContext, currentWord.getMiwokPronunciation());

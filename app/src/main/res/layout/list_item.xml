@@ -11,9 +11,11 @@
         android:id="@+id/image"
         android:layout_width="@dimen/list_item_height"
         android:layout_height="@dimen/list_item_height"
+        android:background="?android:attr/selectableItemBackground"
         tools:background="@android:color/black" />
 
     <RelativeLayout
+        android:id="@+id/text_container_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -21,6 +23,7 @@
             android:id="@+id/text_container"
             android:layout_width="match_parent"
             android:layout_height="@dimen/list_item_height"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center_vertical"
             android:orientation="vertical"
             android:paddingLeft="16dp"
@@ -45,12 +48,12 @@
 
         </LinearLayout>
 
-        <Button
+        <TextView
             android:id="@+id/play_button"
-            android:layout_width="wrap_content"
+            android:layout_width="88dp"
             android:layout_height="@dimen/list_item_height"
             android:layout_alignParentRight="true"
-            android:background="@android:color/transparent"
+            android:gravity="center_vertical|center_horizontal"
             android:text="►"
             android:textColor="@android:color/white"
             android:textSize="36dp" />
